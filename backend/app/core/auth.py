@@ -20,15 +20,15 @@ class AuthUser:
     
     @property
     def can_create(self) -> bool:
-        return self.has_permission("org:tasks:view")
+        return self.has_permission("org:tasks:create")
     
     @property
     def can_delete(self) -> bool:
-        return self.has_permission("org:tasks:view")
+        return self.has_permission("org:tasks:delete")
     
     @property
     def can_edit(self) -> bool:
-        return self.has_permission("org:tasks:view")
+        return self.has_permission("org:tasks:edit")
     
 
 # function to convert FastAPI Request to httpx.Request
@@ -47,7 +47,7 @@ async def get_current_user(request: Request) -> AuthUser:
     # authenticate the request using Clerk
     request_state = clerk.authenticate_request(
         httpx_request,
-        AuthenticateRequestOptions(authorized_parties=["settings.FRONTEND_URL"]
+        AuthenticateRequestOptions(authorized_parties=[settings.FRONTEND_URL]
         )
     )
 

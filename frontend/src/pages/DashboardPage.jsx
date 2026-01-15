@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback } from "react";
-import { useAuth, useOrganization, CreateOrganizationForm } from "@clerk/clerk-react";
+import { useAuth, useOrganization, CreateOrganization } from "@clerk/clerk-react";
 import { getTasks } from "../services/api";
 import KanbanBoard from "../components/KanbanBoard";
 
@@ -45,7 +45,7 @@ function DashboardPage() {
             <p className="no-org-text">
                 Create or join an organization to get started managing tasks with your team.
             </p>
-            <CreateOrganizationForm afterCreateOrganizationUrl="/dashboard" />
+            <CreateOrganization afterCreateOrganizationUrl="/dashboard" />
             </div>
         </div>
         );

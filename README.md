@@ -2,6 +2,17 @@
 
 TaskBoard is a B2B SaaS team task management platform designed for modern organizations. It supports multiple organizations, team members, roles, permissions, subscriptions, and billing — making it ideal for teams that need structure, collaboration, and scalability.
 
+##### Welcome page
+![WelcomePage](screenshots/welcome_page.png)
+
+##### Signup page
+![SignUp](screenshots/signup.png)
+
+##### Dashboard
+![Dashboard](screenshots/dashboard.png)
+
+
+
 
 
 ## Features
