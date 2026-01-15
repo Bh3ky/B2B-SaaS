@@ -26,7 +26,7 @@ class TaskStatusUpdate(BaseModel):
 # Response schema for returning task data which is slimmed down as we
 # don't want to return everything stored in the database.
 class TaskResponse(BaseModel):
-    id: int
+    id: str
     title: str
     description: Optional[str]
     status: TasksStatus

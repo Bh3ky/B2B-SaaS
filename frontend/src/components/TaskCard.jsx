@@ -18,12 +18,11 @@ function TaskCard({ task, onEdit, onDelete }) {
                     >
                         x
                     </button>
-                )} 
-                {task.description && (
-                    <p className={"task-card-description"}>{task.description}</p>
-                )}
-                    
+                )}                  
             </div>
+            {task.description && (
+                <p className={"task-card-description"}>{task.description}</p>
+            )}
         </div>
 }
 
